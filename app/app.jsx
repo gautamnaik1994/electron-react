@@ -1,18 +1,24 @@
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
-
-
-// require('foundation-sites/dist/foundation.min.css')
-
-
 require('applicationStyles')
-$(document).foundation();
+import Search from './components/search.component';
+
+//$(document).foundation();
+
+class App extends React.Component {
+    render() {
+        return (
+          <Search />
+        );
+    }
+};
+
  
 
 ReactDOM.render(
-  <p>Boliler</p>,
+  <App/ >,
   document.getElementById('content')
 );
